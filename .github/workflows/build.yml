@@ -23,10 +23,10 @@ jobs:
         working-directory: android
         run: ./gradlew assembleRelease --no-daemon
       - name: Rename
-        run: cp android/app/build/outputs/apk/release/app-release.apk Rezro-1.1.apk
+        run: cp android/app/build/outputs/apk/release/app-release.apk Jaino.apk
       - name: Publish
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v1.1-${{ github.run_number }}
-          name: Rezro 1.1
-          files: Rezro-1.1.apk
+          tag_name: jaino-${{ github.run_number }}
+          name: Jaino ${{ github.run_number }}
+          files: Jaino.apk
